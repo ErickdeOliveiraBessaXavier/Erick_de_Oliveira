@@ -136,13 +136,7 @@ function App() {
               <span className="designer-text">& Designer</span>
             </h1>
             <p>
-              Eu me chamo <span className="highlight">Erick de Oliveira</span> e
-              sou especializado em desenvolvimento de{" "}
-              <span className="highlight">aplicativos nativos</span>,
-              <span className="highlight">UX/UI</span>, e plataformas no-code
-              como
-              <span className="highlight">Bubble.io</span> e{" "}
-              <span className="highlight">WordPress</span>.
+              Sou <span className="highlight">Erick de Oliveira</span>, <span className="highlight">Desenvolvedor Full Stack</span> com experiência em <span className="highlight">UX/UI</span>, <span className="highlight">automação de processos</span>, <span className="highlight">aplicativos nativos</span> e ferramentas no-code como <span className="highlight">Bubble.io</span> e <span className="highlight">WordPress</span>. Atualmente atuo na <span className="highlight">Focco Brasil</span>, focado em desenvolvimento interno e integração de APIs. Tenho domínio em <span className="highlight">Python</span>, <span className="highlight">JavaScript</span>, <span className="highlight">PHP</span>, <span className="highlight">SQL</span> e sou fluente em inglês.
             </p>
 
             <a
@@ -170,18 +164,7 @@ function App() {
         <div id="sobremim" data-aos="fade-up" className="about-me">
           <h1>Sobre Mim</h1>
           <p>
-            Sou <span className="highlight">Erick de Oliveira</span>, um
-            Desenvolvedor Full Stack com 3 anos de experiência em criação de
-            aplicativos nativos e uso de ferramentas no code, como Bubble.io e
-            WordPress.
-            <span className="highlight">Especializado em UX e UI</span>, meu
-            foco é desenvolver interfaces intuitivas e responsivas que otimizem
-            a experiência do usuário. Com habilidades em diversas linguagens de
-            programação, incluindo JavaScript, PHP e Python, tenho trabalhado em
-            projetos desafiadores, colaborando com equipes para garantir
-            qualidade e inovação. Fluente em inglês e português, estou sempre em
-            <span className="highlight">busca de novos desafios</span> que me
-            permitam crescer e contribuir para soluções impactantes.
+            Sou <span className="highlight">Erick de Oliveira</span>, <span className="highlight">Desenvolvedor Full Stack</span> com 3 anos de experiência na criação de <span className="highlight">aplicativos nativos</span>, <span className="highlight">automações</span> e soluções em plataformas no-code, como <span className="highlight">Bubble.io</span> e <span className="highlight">WordPress</span>. Formado em <span className="highlight">Sistemas e Mídias Digitais pela UFC</span>, sou especializado em <span className="highlight">UX/UI Design</span>, com foco na criação de interfaces intuitivas, responsivas e centradas no usuário. Possuo amplo conhecimento em linguagens de programação como <span className="highlight">JavaScript</span>, <span className="highlight">PHP</span> e <span className="highlight">Python</span>, além de experiência com ferramentas de automação, inteligência artificial, CRM e desenvolvimento de aplicações web e mobile. Fluente em português e inglês, atuo em projetos que exigem <span className="highlight">inovação</span>, <span className="highlight">colaboração</span> e <span className="highlight">soluções eficientes</span>, sempre em busca de desafios que impulsionem meu crescimento profissional e contribuam para produtos de alto impacto.
           </p>
         </div>
 
@@ -350,6 +333,36 @@ function App() {
             </div>
             <h3>Premiere</h3>
           </div>
+          <div className="skill-card">
+            <div className="skill-icon">
+              <img
+                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/chatgpt-icon.png"
+                alt="ChatGPT Icon"
+                className="Icons-Habilidades"
+              ></img>
+            </div>
+            <h3>ChatGPT</h3>
+          </div>
+          <div className="skill-card">
+            <div className="skill-icon">
+              <img
+                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/claude-ai-icon.png"
+                alt="Claude Icon"
+                className="Icons-Habilidades"
+              ></img>
+            </div>
+            <h3>Claude</h3>
+          </div>
+          <div className="skill-card">
+            <div className="skill-icon">
+              <img
+                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png"
+                alt="Gemini Icon"
+                className="Icons-Habilidades"
+              ></img>
+            </div>
+            <h3>Gemini</h3>
+          </div>
         </div>
 
         <a
@@ -372,6 +385,17 @@ function App() {
         >
           <div className="time-line">
             <div className="outer">
+              <div className="card">
+                <div className="info">
+                  <h3 className="title">Software Developer | Focco Brasil</h3>
+                  <p>
+                    Atuo no desenvolvimento de automações e ferramentas internas para otimizar processos e aumentar a eficiência operacional. 
+                    Crio scripts e programas personalizados conforme as demandas da equipe, integrando sistemas e eliminando tarefas repetitivas. 
+                    Trabalho de forma colaborativa com diferentes áreas da empresa, identificando oportunidades de melhoria e implementando soluções tecnológicas sob medida. 
+                    Busco constantemente formas de reduzir o trabalho manual, melhorar fluxos de trabalho e entregar resultados mais ágeis por meio da tecnologia.
+                  </p>
+                </div>
+              </div>
               <div className="card">
                 <div className="info">
                   <h3 className="title">Metashop | 2023 - 2024</h3>
