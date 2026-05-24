@@ -7,12 +7,26 @@ import {
   faInstagram,
   faGithub,
   faLinkedin,
+  faAws,
+  faMeta,
+  faJs,
+  faHtml5,
+  faCss3Alt,
+  faReact,
+  faPython,
+  faPhp,
+  faGitAlt,
+  faWordpress,
+  faFlutter,
+  faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "aos/dist/aos.css"; // Importando o CSS do AOS
 import "./App.css";
+import Resume from "./Resume";
 
 function App() {
   const asset = (fileName) => `${process.env.PUBLIC_URL}/Imagens/${fileName}`;
@@ -24,13 +38,12 @@ function App() {
       once: true, // Anima apenas na primeira vez que o elemento entra na viewport
     });
   }, []);
-    
 
   const toggleAnswer = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const faqItems = [ 
+  const faqItems = [
     {
       question: "Quanto tempo levará para o meu site estar operacional?",
       answer: (
@@ -107,6 +120,26 @@ function App() {
     },
   ];
 
+  const skills = [
+    { name: "JavaScript", icon: faJs, kind: "icon" },
+    { name: "HTML5", icon: faHtml5, kind: "icon" },
+    { name: "CSS3", icon: faCss3Alt, kind: "icon" },
+    { name: "React", icon: faReact, kind: "icon" },
+    { name: "Python", icon: faPython, kind: "icon" },
+    { name: "PHP", icon: faPhp, kind: "icon" },
+    { name: "AWS", icon: faAws, kind: "icon" },
+    { name: "Git", icon: faGitAlt, kind: "icon" },
+    { name: "SQL", icon: asset("Sql.png"), kind: "image" },
+    { name: "WordPress", icon: faWordpress, kind: "icon" },
+    { name: "Bubble.io", icon: asset("Bubble.png"), kind: "image" },
+    { name: "Meta Ads Manager", icon: faMeta, kind: "icon" },
+    { name: "Flutter", icon: faFlutter, kind: "icon" },
+    { name: "Vue.js", icon: faVuejs, kind: "icon" },
+    { name: "Photoshop", icon: asset("PS.png"), kind: "image" },
+    { name: "Illustrator", icon: asset("Ilustrator.png"), kind: "image" },
+    { name: "Premiere", icon: asset("premiere.png"), kind: "image" },
+  ];
+
   return (
     <div className="App">
       {/* Cabeçalho */}
@@ -120,10 +153,10 @@ function App() {
               <a href="#sobremim">Sobre Mim</a>
             </li>
             <li>
-              <a href="#timeline">Educação e Experiência</a>
+              <a href="#timeline">Carreira</a>
             </li>
             <li>
-              <a href="#projetos">Últimos Projetos</a>
+              <a href="#projetos">Projetos</a>
             </li>
           </ul>
         </nav>
@@ -137,7 +170,7 @@ function App() {
         <div className="home-container">
           <div data-aos="fade-right" className="home-text">
             <h1>
-              Desenvolvendor<br></br>
+              Desenvolvedor<br></br>
               <span className="designer-text">& Designer</span>
             </h1>
             <p>
@@ -165,316 +198,141 @@ function App() {
         <div className="gradient-bottom"></div>
       </section>
 
-      <section id className="section-about-skills">
+      <section className="section-about-skills">
         <div id="sobremim" data-aos="fade-up" className="about-me">
           <h1>Sobre Mim</h1>
           <p>
-            Sou <span className="highlight">Erick de Oliveira</span>, <span className="highlight">Desenvolvedor Full Stack</span> com 3 anos de experiência na criação de <span className="highlight">aplicativos nativos</span>, <span className="highlight">automações</span> e soluções em plataformas no-code, como <span className="highlight">Bubble.io</span> e <span className="highlight">WordPress</span>. Formado em <span className="highlight">Sistemas e Mídias Digitais pela UFC</span>, sou especializado em <span className="highlight">UX/UI Design</span>, com foco na criação de interfaces intuitivas, responsivas e centradas no usuário. Possuo amplo conhecimento em linguagens de programação como <span className="highlight">JavaScript</span>, <span className="highlight">PHP</span> e <span className="highlight">Python</span>, além de experiência com ferramentas de automação, inteligência artificial, CRM e desenvolvimento de aplicações web e mobile. Fluente em português e inglês, atuo em projetos que exigem <span className="highlight">inovação</span>, <span className="highlight">colaboração</span> e <span className="highlight">soluções eficientes</span>, sempre em busca de desafios que impulsionem meu crescimento profissional e contribuam para produtos de alto impacto.
+            Sou <span className="highlight">Erick de Oliveira</span>,
+            <span className="highlight">Desenvolvedor Full Stack</span>
+            com atuação voltada para a criação de soluções digitais robustas,
+            eficientes e orientadas a resultados. Sou formado em
+            <span className="highlight">Sistemas e Mídias Digitais pela Universidade Federal do Ceará (UFC)</span>
+            e atualmente curso a
+            <span className="highlight">
+              Pós-graduação em Desenvolvimento Full Stack
+            </span>
+            , aprofundando minha formação em arquitetura de aplicações,
+            integração de sistemas e boas práticas de desenvolvimento.
+            <br />
+            <br />
+            Tenho experiência no desenvolvimento de
+            <span className="highlight"> aplicativos nativos</span>,
+            <span className="highlight"> automações</span>, interfaces e
+            soluções web com foco em performance, escalabilidade e boa
+            experiência de uso. Também conheço ferramentas da área como
+            <span className="highlight"> Bubble.io</span> e
+            <span className="highlight"> WordPress</span>, que utilizo como
+            parte do meu repertório técnico quando o contexto do projeto pede.
+            Além disso, trabalho com <span className="highlight">UX/UI Design</span>,
+            priorizando produtos intuitivos, responsivos e alinhados às
+            necessidades do negócio.
+            <br />
+            <br />
+            Ao longo da minha trajetória, venho trabalhando com
+            <span className="highlight"> JavaScript</span>,
+            <span className="highlight"> PHP</span>,
+            <span className="highlight"> Python</span> e ferramentas de
+            automação, inteligência artificial, CRM e cloud. Também tenho
+            conhecimento em <span className="highlight">AWS</span>, com
+            experiência em ambientes, servidores, monitoramento e suporte à
+            infraestrutura das aplicações. Além disso, domino ferramentas de
+            mídia paga como o <span className="highlight">Meta Ads Manager</span>,
+            o que amplia minha visão sobre produto, marketing e resultado.
+            Atualmente, na <span className="highlight">Focco Brasil</span>,
+            atuo na evolução de processos internos, integrações e soluções que
+            exigem estabilidade, escalabilidade e ganho de eficiência.
+            Fluente em português e inglês, valorizo colaboração, visão
+            analítica e entrega consistente de resultados.
           </p>
         </div>
 
-        <h1 data-aos="fade-up" className="Minha-Habilidades">
-          Minhas Habilidades
+        <h1 data-aos="fade-up" style={{ textAlign: "center" }}>
+          Habilidades
         </h1>
 
-        <div data-aos="fade-up" data-aos-delay="300" className="skills-grid">
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Javascript.png")}
-                alt="Javascript Icon"
-                className="Icons-Habilidades"
-              ></img>
+        <div data-aos="fade-up" className="skills-grid">
+          {skills.map((skill) => (
+            <div className="skill-card" key={skill.name}>
+              <div className="skill-icon">
+                {skill.kind === "image" ? (
+                  <img
+                    src={skill.icon}
+                    alt={`${skill.name} Icon`}
+                    className="Icons-Habilidades"
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={skill.icon}
+                    className="Icons-Habilidades"
+                    aria-hidden="true"
+                  />
+                )}
+              </div>
+              <h3>{skill.name}</h3>
             </div>
-            <h3>JavaScript</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Html.png")}
-                alt="Html Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>HTML</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Css.png")}
-                alt="Css Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>CSS</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("C.png")}
-                alt="C Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>C++</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("C_Hashtag.png")}
-                alt="C_Hashtag Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>C#</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Flutter.png")}
-                alt="Flutter Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Flutter</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Git.png")}
-                alt="Git Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Git</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("mysql.png")}
-                alt="mysql Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>MySQL</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("PHP.png")}
-                alt="PHP Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>PHP</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Python.png")}
-                alt="Python Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Python</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("React.png")}
-                alt="React Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>React Native</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Vue.png")}
-                alt="Vue Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Vue.js</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Wordpress.png")}
-                alt="Wordpress Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Wordpress</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("PS.png")}
-                alt="PhotoShop Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>PhotoShop</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("Ilustrator.png")}
-                alt="Ilustrator Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Ilustrator</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src={asset("premiere.png")}
-                alt="Premiere Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Premiere</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/chatgpt-icon.png"
-                alt="ChatGPT Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>ChatGPT</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/claude-ai-icon.png"
-                alt="Claude Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Claude</h3>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">
-              <img
-                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png"
-                alt="Gemini Icon"
-                className="Icons-Habilidades"
-              ></img>
-            </div>
-            <h3>Gemini</h3>
-          </div>
+          ))}
         </div>
 
-        <a
-          href="https://github.com/ArierEdvolikice"
-          data-aos="fade-in"
-          data-aos-delay="600"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Conheça Meus Projetos</button>
-        </a>
+        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <a
+            href="https://github.com/ArierEdvolikice"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="github-button">Ver GitHub</button>
+          </a>
+        </div>
       </section>
 
       <section id="timeline" className="Timeline">
         <h1 data-aos="fade-up">Educação e Experiência</h1>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="300"
-          className="experience-grid"
-        >
-          <div className="time-line">
-            <div className="outer">
-              <div className="card">
-                <div className="info">
-                  <h3 className="title">Software Developer | Focco Brasil</h3>
-                  <p>
-                    Atuo no desenvolvimento de automações e ferramentas internas para otimizar processos e aumentar a eficiência operacional. 
-                    Crio scripts e programas personalizados conforme as demandas da equipe, integrando sistemas e eliminando tarefas repetitivas. 
-                    Trabalho de forma colaborativa com diferentes áreas da empresa, identificando oportunidades de melhoria e implementando soluções tecnológicas sob medida. 
-                    Busco constantemente formas de reduzir o trabalho manual, melhorar fluxos de trabalho e entregar resultados mais ágeis por meio da tecnologia.
-                  </p>
-                </div>
+        <div className="experience-grid">
+          <div className="outer">
+            <div className="card" data-aos="fade-up">
+              <div className="info">
+                <h3 className="title">Software Developer | Focco Brasil</h3>
+                <p>
+                  Atuo no desenvolvimento de soluções internas, automações e ferramentas voltadas à otimização de processos operacionais e suporte ao ecossistema de e-commerce da empresa. Trabalho com integração de sistemas, criação de scripts e aplicações sob demanda, além da análise e melhoria contínua de fluxos internos.
+                  <br />
+                  <br />
+                  Também participo da administração e configuração de ambientes em AWS, incluindo gerenciamento de servidores, monitoramento de performance, análise de cache e suporte à infraestrutura das aplicações. Tenho experiência na identificação de gargalos, redução de tarefas manuais e implementação de soluções voltadas à escalabilidade, estabilidade e ganho de eficiência operacional.
+                </p>
               </div>
-              <div className="card">
-                <div className="info">
-                  <h3 className="title">Metashop | 2023 - 2024</h3>
-                  <p>
-                    Atuei como{" "}
-                    <span className="highlight">Desenvolvedor Full Stack</span>,
-                    onde criei interfaces de usuário intuitivas e responsivas,
-                    combinando design e funcionalidade para proporcionar uma
-                    experiência fluida. Desenvolvi e implementei workflows
-                    complexos voltados para a automação de processos, além de
-                    criar elementos gráficos e visuais que enriqueceram as
-                    páginas web. Também fui{" "}
-                    <span className="highlight">
-                      responsável pela integração de APIs e funcionalidades
-                      externas
-                    </span>
-                    , sempre com foco na otimização da experiência do usuário
-                    (UX) e na eficiência das interfaces (UI). Realizei testes
-                    rigorosos e depuração constante, garantindo a qualidade e a
-                    performance de cada projeto.
-                  </p>
-                </div>
+            </div>
+            <div className="card" data-aos="fade-up">
+              <div className="info">
+                <h3 className="title">Metashop | 2023 - 2024</h3>
+                <p>
+                  Atuei como <span className="highlight">Desenvolvedor Full Stack</span>, onde criei interfaces de usuário intuitivas e responsivas, combinando design e funcionalidade para proporcionar uma experiência fluida. Desenvolvi e implementei workflows complexos voltados para a automação de processos, além de criar elementos gráficos e visuais que enriqueceram as páginas web. Também fui <span className="highlight">responsável pela integração de APIs e funcionalidades externas</span>, sempre com foco na otimização da experiência do usuário (UX) e na eficiência das interfaces (UI). Realizei testes rigorosos e depuração constante, garantindo a qualidade e a performance de cada projeto.
+                </p>
               </div>
-              <div className="card">
-                <div className="info">
-                  <h3 className="title">AKI Agency | 2022 - 2023</h3>
-                  <p>
-                    Atuei como{" "}
-                    <span className="highlight">Desenvolvedor Front-end</span>{" "}
-                    na AKI Agency entre 2022 e 2023, onde fui responsável pelo
-                    desenvolvimento de interfaces responsivas em{" "}
-                    <span className="highlight">código nativo e WordPress</span>
-                    . Criei páginas web dinâmicas e otimizadas, além de projetar
-                    e implementar elementos visuais para projetos online.
-                    Colaborei ativamente com equipes de design e
-                    desenvolvimento, assegurando a qualidade e a coesão em cada
-                    etapa dos projetos.
-                  </p>
-                </div>
+            </div>
+            <div className="card" data-aos="fade-up">
+              <div className="info">
+                <h3 className="title">AKI Agency | 2022 - 2023</h3>
+                <p>
+                  Atuei como <span className="highlight">Desenvolvedor Front-end</span> na AKI Agency entre 2022 e 2023, onde fui responsável pelo desenvolvimento de interfaces responsivas em <span className="highlight">código nativo e WordPress</span>. Criei páginas web dinâmicas e otimizadas, além de projetar e implementar elementos visuais para projetos online. Colaborei ativamente com equipes de design e desenvolvimento, assegurando a qualidade e a coesão em cada etapa dos projetos.
+                </p>
               </div>
-              <div className="card">
-                <div className="info info-diferente">
-                  <h3 className="title">
-                    Sistemas e Mídias Digitais - UFC | 2017 - 2024
-                  </h3>
-                  <p>
-                    Graduação em{" "}
-                    <span className="highlight-diferente">
-                      Sistemas e Mídias Digitais
-                    </span>{" "}
-                    pela Universidade Federal do Ceará (2017-2024). Formação
-                    voltada para o desenvolvimento de sistemas multimídia, com
-                    ênfase em web, dispositivos móveis, jogos digitais e
-                    ferramentas educacionais.{" "}
-                    <span className="highlight-diferente">
-                      Atuação diversificada em áreas como animação
-                    </span>
-                    , modelagem 3D, TV digital, mídias sociais, e engenharia de
-                    software.
-                  </p>
-                </div>
+            </div>
+            <div className="card" data-aos="fade-up">
+              <div className="info">
+                <h3 className="title">UFC | Sistemas e Mídias Digitais</h3>
+                <p>
+                  Bacharelado em Sistemas e Mídias Digitais (2017 - 2025). Formação multidisciplinar focada em design de interfaces, desenvolvimento de sistemas multimídia, UX/UI, jogos digitais e animação, proporcionando uma base sólida para a criação de soluções digitais inovadoras.
+                </p>
+              </div>
+            </div>
+            <div className="card" data-aos="fade-up">
+              <div className="info info-diferente">
+                <h3 className="title">Pós-graduação em Desenvolvimento Full Stack</h3>
+                <p>
+                  Pós-graduação em Desenvolvimento Full Stack, com foco em arquitetura de aplicações, desenvolvimento web e mobile, integração de sistemas, práticas modernas de front-end e back-end, além de automação e infraestrutura em nuvem.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <a
-          href="https://wa.me/5585994283128?text=Diga-me%20o%20que%20precisa%20e%20retorno%20assim%20que%20poss%C3%ADvel!%20Obrigado."
-          data-aos="fade-in"
-          data-aos-delay="600"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Entre em Contato</button>
-        </a>
       </section>
 
       <section
@@ -635,14 +493,8 @@ function App() {
         </Swiper>
       </section>
 
-      <section
-        data-aos="fade-in"
-        data-aos-delay="300"
-        id="faq"
-        className="faq__wrapper"
-      >
-        <h1>Algumas Dúvidas</h1>
-
+      <section id="faq" className="faq__wrapper" data-aos="fade-up">
+        <h1>Dúvidas Comuns</h1>
         {faqItems.map((item, index) => (
           <div
             key={index}
@@ -651,11 +503,9 @@ function App() {
           >
             <div className="faq-question">
               <h3>{item.question}</h3>
-              <i
-                className={`fa-solid fa-chevron-down chevron ${
-                  activeIndex === index ? "active" : ""
-                }`}
-              ></i>
+              <FontAwesomeIcon 
+                icon={activeIndex === index ? faChevronUp : faChevronDown} 
+              />
             </div>
             <div className="faq-answer">{item.answer}</div>
           </div>
@@ -667,70 +517,50 @@ function App() {
         className="contrate-me"
         style={{ backgroundImage: `url(${asset("Fundo_Contate_Me.jpg")})` }}
       >
-        <h4 data-aos="fade-in">Vamos Conversar!</h4>
-        <p data-aos="fade-in" data-aos-delay="300">
-          Agende uma <span>sessão gratuita de 15 minutos</span> onde
-          discutiremos seu projeto, suas questões e como resolvê-las.
+        <h4 data-aos="fade-in">Vamos Conversar?</h4>
+        <p data-aos="fade-in">
+          Agende uma consultoria gratuita para discutirmos como posso ajudar no
+          seu próximo grande projeto.
         </p>
-        <a
-          href="https://wa.me/5585994283128?text=Diga-me%20o%20que%20precisa%20e%20retorno%20assim%20que%20poss%C3%ADvel!%20Obrigado."
-          data-aos="fade-in"
-          data-aos-delay="600"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Agendar Sessão</button>
-        </a>
+        <div style={{ display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" }}>
+          <a
+            href="https://wa.me/5585994283128"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Agendar Agora</button>
+          </a>
+          <button onClick={() => window.print()} className="github-button">
+            Baixar Currículo
+          </button>
+        </div>
       </section>
 
       <footer className="footer">
-        <div className="footer-content">
-          <div className="row social-media">
-            <a
-              href="https://www.linkedin.com/in/erick-de-oliveira-733ba174/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a
-              href="https://www.instagram.com/arier_edvolikice/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a
-              href="https://github.com/ArierEdvolikice"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </div>
-
-          <div className="row">
-            <ul>
-              <li>
-                <a href="#home">Home</a>
-              </li>
-              <li>
-                <a href="#sobremim">Sobre Mim</a>
-              </li>
-              <li>
-                <a href="#timeline">Educação e Experiência</a>
-              </li>
-              <li>
-                <a href="#projetos">Últimos Projetos</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="row">
-            Erick de Oliveira | Copyright © 2024 | Todos os direitos reservados
-          </div>
+        <div className="social-media">
+          <a href="https://linkedin.com/in/erick-de-oliveira-733ba174/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="https://instagram.com/arier_edvolikice/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="https://github.com/ArierEdvolikice" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
         </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobremim">Sobre</a></li>
+          <li><a href="#timeline">Carreira</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+        </ul>
+        <p>© 2024 Erick de Oliveira | Todos os direitos reservados</p>
       </footer>
+
+      {/* Resume Component for Printing */}
+      <div className="resume-print-only">
+        <Resume />
+      </div>
     </div>
   );
 }
