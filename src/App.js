@@ -15,6 +15,7 @@ import "aos/dist/aos.css"; // Importando o CSS do AOS
 import "./App.css";
 
 function App() {
+  const asset = (fileName) => `${process.env.PUBLIC_URL}/Imagens/${fileName}`;
   const [activeIndex, setActiveIndex] = useState(null);
 
   useEffect(() => {
@@ -128,7 +129,11 @@ function App() {
         </nav>
       </header>
 
-      <section id="home" className="section-home">
+      <section
+        id="home"
+        className="section-home"
+        style={{ backgroundImage: `url(${asset("Fundo_Home.jpg")})` }}
+      >
         <div className="home-container">
           <div data-aos="fade-right" className="home-text">
             <h1>
@@ -151,7 +156,7 @@ function App() {
           </div>
           <div data-aos="fade-in" className="home-image">
             <img
-              src="/erick-de-oliveira/Imagens/Foto_Sec_2.webp"
+              src={asset("Foto_Sec_2.webp")}
               alt="Erick de Oliveira"
               className="profile-photo"
             />
@@ -176,7 +181,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Javascript.png"
+                src={asset("Javascript.png")}
                 alt="Javascript Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -186,7 +191,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Html.png"
+                src={asset("Html.png")}
                 alt="Html Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -196,7 +201,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Css.png"
+                src={asset("Css.png")}
                 alt="Css Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -206,7 +211,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/C.png"
+                src={asset("C.png")}
                 alt="C Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -216,7 +221,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/C_Hashtag.png"
+                src={asset("C_Hashtag.png")}
                 alt="C_Hashtag Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -226,7 +231,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Flutter.png"
+                src={asset("Flutter.png")}
                 alt="Flutter Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -236,7 +241,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Git.png"
+                src={asset("Git.png")}
                 alt="Git Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -246,7 +251,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/mysql.png"
+                src={asset("mysql.png")}
                 alt="mysql Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -256,7 +261,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/PHP.png"
+                src={asset("PHP.png")}
                 alt="PHP Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -266,7 +271,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Python.png"
+                src={asset("Python.png")}
                 alt="Python Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -276,7 +281,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/React.png"
+                src={asset("React.png")}
                 alt="React Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -286,7 +291,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Vue.png"
+                src={asset("Vue.png")}
                 alt="Vue Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -296,7 +301,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Wordpress.png"
+                src={asset("Wordpress.png")}
                 alt="Wordpress Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -306,7 +311,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/PS.png"
+                src={asset("PS.png")}
                 alt="PhotoShop Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -316,7 +321,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/Ilustrator.png"
+                src={asset("Ilustrator.png")}
                 alt="Ilustrator Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -326,7 +331,7 @@ function App() {
           <div className="skill-card">
             <div className="skill-icon">
               <img
-                src="/erick-de-oliveira/Imagens/premiere.png"
+                src={asset("premiere.png")}
                 alt="Premiere Icon"
                 className="Icons-Habilidades"
               ></img>
@@ -472,7 +477,11 @@ function App() {
         </a>
       </section>
 
-      <section id="projetos" className="Projetos">
+      <section
+        id="projetos"
+        className="Projetos"
+        style={{ backgroundImage: `url(${asset("Fundo_Projetos.jpg")})` }}
+      >
         <h1 data-aos="zoom-in">Últimos Projetos</h1>
         <Swiper
     data-aos="zoom-in"
@@ -508,7 +517,7 @@ function App() {
           <SwiperSlide>
             <div className="slide-content">
               <img
-                src="/erick-de-oliveira/Imagens/Ferrovia.jpg"
+                src={asset("Ferrovia.jpg")}
                 alt="Projeto 1"
                 className="slide-image"
               />
@@ -526,7 +535,7 @@ function App() {
           <SwiperSlide>
             <div className="slide-content">
               <img
-                src="/erick-de-oliveira/Imagens/Farkas.jpg"
+                src={asset("Farkas.jpg")}
                 alt="Projeto 2"
                 className="slide-image"
               />
@@ -544,7 +553,7 @@ function App() {
           <SwiperSlide>
             <div className="slide-content">
               <img
-                src="/erick-de-oliveira/Imagens/Metashop.jpg"
+                src={asset("Metashop.jpg")}
                 alt="Projeto 3"
                 className="slide-image"
               />
@@ -561,7 +570,7 @@ function App() {
           <SwiperSlide>
             <div className="slide-content">
               <img
-                src="/erick-de-oliveira/Imagens/Projeto_Cadastro_UFC.jpg"
+                src={asset("Projeto_Cadastro_UFC.jpg")}
                 alt="Projeto 4"
                 className="slide-image"
               />
@@ -577,7 +586,7 @@ function App() {
           <SwiperSlide>
             <div className="slide-content">
               <img
-                src="/erick-de-oliveira/Imagens/Mavic.jpg"
+                src={asset("Mavic.jpg")}
                 alt="Projeto 5"
                 className="slide-image"
               />
@@ -593,7 +602,7 @@ function App() {
           <SwiperSlide>
             <div className="slide-content">
               <img
-                src="/erick-de-oliveira/Imagens/WaveUs.jpg"
+                src={asset("WaveUs.jpg")}
                 alt="Projeto 6"
                 className="slide-image"
               />
@@ -610,7 +619,7 @@ function App() {
           <SwiperSlide>
             <div className="slide-content">
               <img
-                src="/erick-de-oliveira/Imagens/Dr_Saude.jpg"
+                src={asset("Dr_Saude.jpg")}
                 alt="Projeto 7"
                 className="slide-image"
               />
@@ -653,7 +662,11 @@ function App() {
         ))}
       </section>
 
-      <section id="Contrate-me" className="contrate-me">
+      <section
+        id="Contrate-me"
+        className="contrate-me"
+        style={{ backgroundImage: `url(${asset("Fundo_Contate_Me.jpg")})` }}
+      >
         <h4 data-aos="fade-in">Vamos Conversar!</h4>
         <p data-aos="fade-in" data-aos-delay="300">
           Agende uma <span>sessão gratuita de 15 minutos</span> onde
