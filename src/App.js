@@ -537,24 +537,42 @@ function App() {
       </section>
 
       <footer className="footer">
-        <div className="social-media">
-          <a href="https://linkedin.com/in/erick-de-oliveira-733ba174/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <a href="https://instagram.com/arier_edvolikice/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a href="https://github.com/ErickdeOliveiraBessaXavier" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
+        <div className="footer-content">
+          <div className="footer-brand">
+            <h2>Erick de Oliveira</h2>
+            <p>Desenvolvendo soluções digitais com foco em performance, escalabilidade e experiência do usuário.</p>
+            <div className="footer-contact-info">
+              <p>erickoeobx@gmail.com</p>
+              <p>eobx@hotmail.com</p>
+            </div>
+          </div>
+          <div className="footer-links">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#sobremim">Sobre</a></li>
+              <li><a href="#timeline">Carreira</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+            </ul>
+          </div>
+          <div className="footer-social">
+            <h4>Siga-me</h4>
+            <div className="social-icons">
+              <a href="https://linkedin.com/in/erick-de-oliveira-733ba174/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a href="https://instagram.com/arier_edvolikice/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a href="https://github.com/ErickdeOliveiraBessaXavier" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
+          </div>
         </div>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobremim">Sobre</a></li>
-          <li><a href="#timeline">Carreira</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-        </ul>
-        <p>© 2024 Erick de Oliveira | Todos os direitos reservados</p>
+        <div className="footer-bottom">
+          <p>© 2024 Erick de Oliveira | Todos os direitos reservados</p>
+        </div>
       </footer>
 
       {/* Resume Component for Printing */}

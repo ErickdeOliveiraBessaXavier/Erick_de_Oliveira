@@ -22,23 +22,35 @@ const Resume = () => {
             </div>
           </div>
           <div className="contact-grid">
-            <div className="contact-item">
-              <FontAwesomeIcon icon={faEnvelope} /> <span>erick.oliveira@email.com</span>
+            <div className="contact-group">
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faEnvelope} /> 
+                <a href="mailto:erickoeobx@gmail.com">erickoeobx@gmail.com</a>
+              </div>
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faEnvelope} /> 
+                <a href="mailto:eobx@hotmail.com">eobx@hotmail.com</a>
+              </div>
             </div>
-            <div className="contact-item">
-              <FontAwesomeIcon icon={faPhone} /> <span>(85) 99428-3128</span>
+            
+            <div className="contact-group">
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faPhone} /> <span>(85) 99428-3128</span>
+              </div>
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faMapMarkerAlt} /> <span>Fortaleza, CE</span>
+              </div>
             </div>
-            <div className="contact-item">
-              <FontAwesomeIcon icon={faLinkedin} /> <span>linkedin.com/in/erick-de-oliveira</span>
-            </div>
-            <div className="contact-item">
-              <FontAwesomeIcon icon={faGithub} /> <span>github.com/ErickdeOliveiraBessaXavier</span>
-            </div>
-            <div className="contact-item">
-              <FontAwesomeIcon icon={faMapMarkerAlt} /> <span>Fortaleza, CE</span>
-            </div>
-            <div className="contact-item">
-              <FontAwesomeIcon icon={faGlobe} /> <span>erickdeoliveirabessaxavier.github.io/Erick_de_Oliveira/</span>
+
+            <div className="contact-group">
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faLinkedin} /> 
+                <a href="https://linkedin.com/in/erick-de-oliveira" target="_blank" rel="noreferrer">linkedin.com/in/erick-de-oliveira</a>
+              </div>
+              <div className="contact-item">
+                <FontAwesomeIcon icon={faGithub} /> 
+                <a href="https://github.com/ErickdeOliveiraBessaXavier" target="_blank" rel="noreferrer">github.com/ErickdeOliveiraBessaXavier</a>
+              </div>
             </div>
           </div>
         </header>
@@ -124,19 +136,20 @@ const Resume = () => {
             <section className="sidebar-section">
               <h3>Competências</h3>
               <ul className="skills-list">
-                <li>Liderança</li>
-                <li>Agilidade</li>
-                <li>Visão de Produto</li>
-                <li>Clean Code</li>
+                <li>Pensamento Analítico</li>
+                <li>Atenção aos Detalhes</li>
+                <li>Escuta Ativa</li>
+                <li>Foco e Concentração</li>
               </ul>
             </section>
           </aside>
         </div>
         
-        {/* Decorative Footer Illustration */}
         <footer className="resume-footer-decoration">
-          <div className="footer-line"></div>
-          <p>Documento gerado digitalmente em erickdeoliveirabessaxavier.github.io/Erick_de_Oliveira/</p>
+          <p>
+            Documento gerado digitalmente em<br />
+            <span className="footer-url">erickdeoliveirabessaxavier.github.io/Erick_de_Oliveira/</span>
+          </p>
         </footer>
       </div>
     </div>

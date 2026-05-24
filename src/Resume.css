@@ -11,7 +11,7 @@
 }
 
 .resume-container {
-  padding: 50px 40px 30px 40px; /* Aumentado padding superior */
+  padding: 40px 40px 30px 40px; /* Restaurado equilíbrio */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -33,12 +33,13 @@
 }
 
 .profile-circle {
-  width: 110px; /* Foto aumentada */
-  height: 110px;
+  width: 165px; /* Aumentado 1.5x (original 110px) */
+  height: 165px; /* Aumentado 1.5x (original 110px) */
   border-radius: 50%;
-  border: 3px solid #ff6a46;
+  border: 4px solid #ff6a46; /* Aumentada borda proporcionalmente */
   overflow: hidden;
   background-color: #f2f2f2;
+  flex-shrink: 0; /* Garante que a foto não amasse */
 }
 
 .profile-circle img {
@@ -67,47 +68,98 @@
 .contact-grid {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  font-size: 11px !important; /* Levemente aumentado */
+  gap: 8px;
   text-align: right;
+}
+
+.contact-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-right: 2px solid rgba(255, 106, 70, 0.3);
+  padding-right: 12px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 6px;
+  gap: 8px;
+  font-size: 10.5px !important;
+  color: #444;
+}
+
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover {
+  color: #ff6a46;
 }
 
 .contact-item svg {
   color: #ff6a46;
-  width: 12px;
+  width: 11px;
 }
 
 .resume-body {
   display: grid;
-  grid-template-columns: 1.6fr 0.9fr; /* Hierarquia clara: Principal vs Lateral */
-  gap: 35px;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 30px; 
   flex-grow: 1;
+  align-items: start;
 }
 
+/* Coluna Direita (Sidebar) */
+.resume-sidebar {
+  border: 2px solid #ff6a46;
+  padding: 15px 18px; 
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-section {
+  margin-bottom: 15px; 
+}
+
+.sidebar-section h3 {
+  font-size: 14px !important;
+  background-color: transparent !important;
+  color: #1b1b1b;
+  padding: 8px 0 !important; /* Texto agora começa no zero absoluto */
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  border-left: none !important;
+  border-bottom: 1.5px solid #ff6a46; /* Troquei o fundo por uma linha base laranja sutil */
+  margin-left: 0 !important;
+}
+
+/* Coluna Principal */
 .resume-section {
-  margin-bottom: 20px; /* Reduzido levemente para garantir 1 página */
+  margin-bottom: 20px;
 }
 
 .resume-section h3 {
   font-family: "Oswald", sans-serif;
-  font-size: 16px !important; /* Aumentado para mais destaque */
-  font-weight: 700; /* Mais pesado */
+  font-size: 16px !important;
+  font-weight: 700;
   border-left: 5px solid #ff6a46;
   padding-left: 12px;
   margin-bottom: 15px;
   text-transform: uppercase;
   color: #1b1b1b;
-  background-color: #f8f8f8;
+  background-color: #f8f8f8 !important;
   padding-top: 6px;
   padding-bottom: 6px;
   letter-spacing: 0.5px;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
 .resume-item {
@@ -122,8 +174,8 @@
 }
 
 .item-header h4 {
-  font-size: 13.5px !important; /* Levemente menor que o h3 */
-  font-weight: 700; /* Menos "pesado" que o h3 */
+  font-size: 13.5px !important;
+  font-weight: 700;
   margin: 0;
   color: #333;
   text-transform: uppercase;
@@ -137,7 +189,7 @@
 
 .resume-section p, 
 .resume-item p {
-  font-size: 12.5px !important; /* Ajustado para equilíbrio com títulos maiores */
+  font-size: 12.5px !important;
   margin: 0;
   line-height: 1.5;
   color: #555;
@@ -147,34 +199,27 @@
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Maior espaçamento entre badges */
+  gap: 8px;
   padding: 0;
   margin: 0;
-  margin-top: 15px; /* MAIS ESPAÇO ENTRE TÍTULO E BADGES */
 }
 
 .skills-list li {
-  font-size: 11px !important;
-  padding: 6px 12px;
+  font-size: 10.5px !important;
+  padding: 5px 10px;
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  border-left: 3px solid #ff6a46; /* Accent color on badges */
+  border-left: 3px solid #ff6a46;
   border-radius: 4px;
   color: #1b1b1b;
   font-weight: 700;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-  margin: 0 !important; /* Reset list margin */
 }
 
-.sidebar-section {
-  margin-bottom: 30px; /* Mais espaço entre seções laterais */
-}
-
-.sidebar-section h3 {
-  font-size: 15px !important;
-  background-color: #f2f2f2;
+.resume-sidebar .skills-list li {
+  /* Estilo específico para a sidebar se necessário */
 }
 
 .resume-footer-decoration {
@@ -183,38 +228,40 @@
   margin-left: -40px;
   margin-right: -40px;
   margin-bottom: -30px;
-  padding: 45px 40px; /* Aumentado 3x para uma altura considerável */
+  padding: 60px 40px; /* Aumentado de 30px para 60px para um rodapé mais imponente */
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* FORÇA A COR DE FUNDO NA IMPRESSÃO/PDF */
   -webkit-print-color-adjust: exact !important;
   print-color-adjust: exact !important;
 }
 
 .resume-footer-decoration p {
   font-size: 10px !important;
-  color: #fff !important; /* Texto branco para contraste */
+  color: #fff !important;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 400; /* Texto base mais leve */
+  line-height: 1.8;
 }
 
-/* Removido o seletor skills-list li::before e outros elementos antigos do footer */
+.footer-url {
+  font-weight: 700; /* URL em destaque */
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
 
 .resume-print-only {
   display: none;
 }
 
 @media print {
-  /* Esconde todo o conteúdo do site original */
   .App > *:not(.resume-print-only) {
     display: none !important;
   }
 
-  /* Garante que o container de impressão esteja visível */
   .resume-print-only {
     display: block !important;
     width: 100%;
@@ -223,18 +270,17 @@
     height: 100%;
   }
 
-  /* Estilos específicos da página A4 */
   .resume-page {
     width: 100%;
-    height: 100vh; /* Ocupa exatamente a viewport de impressão */
+    height: 100vh;
     margin: 0;
     border: none;
     box-shadow: none;
-    overflow: hidden; /* Força o corte para evitar a página 2 */
+    overflow: hidden;
   }
 
   @page {
-    margin: 0; /* Remove as margens do navegador que forçam a 2ª página */
+    margin: 0;
     size: A4;
   }
 }
