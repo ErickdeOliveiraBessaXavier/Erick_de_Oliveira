@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/Erick_de_Oliveira/static/css/main.41adb75e.css",
-    "main.js": "/Erick_de_Oliveira/static/js/main.ca38094a.js",
+    "main.css": "/Erick_de_Oliveira/static/css/main.4ae21e31.css",
+    "main.js": "/Erick_de_Oliveira/static/js/main.32c4e397.js",
     "static/js/453.7ee4257d.chunk.js": "/Erick_de_Oliveira/static/js/453.7ee4257d.chunk.js",
-    "static/media/Fundo_Contate_Me.jpg": "/Erick_de_Oliveira/static/media/Fundo_Contate_Me.78408a913c4a599bf6de.jpg",
-    "static/media/Fundo_Home.jpg": "/Erick_de_Oliveira/static/media/Fundo_Home.e59b32bded24c8a8b2a8.jpg",
-    "static/media/Fundo_Projetos.jpg": "/Erick_de_Oliveira/static/media/Fundo_Projetos.b83e42a16a2e7a332b07.jpg",
     "index.html": "/Erick_de_Oliveira/index.html",
-    "main.41adb75e.css.map": "/Erick_de_Oliveira/static/css/main.41adb75e.css.map",
-    "main.ca38094a.js.map": "/Erick_de_Oliveira/static/js/main.ca38094a.js.map",
+    "main.4ae21e31.css.map": "/Erick_de_Oliveira/static/css/main.4ae21e31.css.map",
+    "main.32c4e397.js.map": "/Erick_de_Oliveira/static/js/main.32c4e397.js.map",
     "453.7ee4257d.chunk.js.map": "/Erick_de_Oliveira/static/js/453.7ee4257d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41adb75e.css",
-    "static/js/main.ca38094a.js"
+    "static/css/main.4ae21e31.css",
+    "static/js/main.32c4e397.js"
   ]
 }
