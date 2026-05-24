@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Erick_de_Oliveira/static/css/main.4ae21e31.css",
-    "main.js": "/Erick_de_Oliveira/static/js/main.32c4e397.js",
+    "main.js": "/Erick_de_Oliveira/static/js/main.518aae72.js",
     "static/js/453.7ee4257d.chunk.js": "/Erick_de_Oliveira/static/js/453.7ee4257d.chunk.js",
     "index.html": "/Erick_de_Oliveira/index.html",
     "main.4ae21e31.css.map": "/Erick_de_Oliveira/static/css/main.4ae21e31.css.map",
-    "main.32c4e397.js.map": "/Erick_de_Oliveira/static/js/main.32c4e397.js.map",
+    "main.518aae72.js.map": "/Erick_de_Oliveira/static/js/main.518aae72.js.map",
     "453.7ee4257d.chunk.js.map": "/Erick_de_Oliveira/static/js/453.7ee4257d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4ae21e31.css",
-    "static/js/main.32c4e397.js"
+    "static/js/main.518aae72.js"
   ]
 }
