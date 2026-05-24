@@ -32,7 +32,7 @@ const Resume = () => {
               <FontAwesomeIcon icon={faLinkedin} /> <span>linkedin.com/in/erick-de-oliveira</span>
             </div>
             <div className="contact-item">
-              <FontAwesomeIcon icon={faGithub} /> <span>github.com/ArierEdvolikice</span>
+              <FontAwesomeIcon icon={faGithub} /> <span>github.com/ErickdeOliveiraBessaXavier</span>
             </div>
             <div className="contact-item">
               <FontAwesomeIcon icon={faMapMarkerAlt} /> <span>Fortaleza, CE</span>

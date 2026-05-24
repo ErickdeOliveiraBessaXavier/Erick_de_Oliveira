@@ -275,7 +275,7 @@ function App() {
 
         <div style={{ textAlign: "center", marginTop: "3rem" }}>
           <a
-            href="https://github.com/ArierEdvolikice"
+            href="https://github.com/ErickdeOliveiraBessaXavier"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -544,7 +544,7 @@ function App() {
           <a href="https://instagram.com/arier_edvolikice/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="https://github.com/ArierEdvolikice" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/ErickdeOliveiraBessaXavier" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
