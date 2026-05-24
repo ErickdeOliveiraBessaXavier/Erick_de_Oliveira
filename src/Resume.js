@@ -38,7 +38,7 @@ const Resume = () => {
               <FontAwesomeIcon icon={faMapMarkerAlt} /> <span>Fortaleza, CE</span>
             </div>
             <div className="contact-item">
-              <FontAwesomeIcon icon={faGlobe} /> <span>erickdeoliveira.dev</span>
+              <FontAwesomeIcon icon={faGlobe} /> <span>erickdeoliveirabessaxavier.github.io/Erick_de_Oliveira/</span>
             </div>
           </div>
         </header>
@@ -136,7 +136,7 @@ const Resume = () => {
         {/* Decorative Footer Illustration */}
         <footer className="resume-footer-decoration">
           <div className="footer-line"></div>
-          <p>Documento gerado digitalmente em erickdeoliveira.dev</p>
+          <p>Documento gerado digitalmente em erickdeoliveirabessaxavier.github.io/Erick_de_Oliveira/</p>
         </footer>
       </div>
     </div>
